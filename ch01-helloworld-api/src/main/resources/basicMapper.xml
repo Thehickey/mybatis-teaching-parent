@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myns">
+    <insert id="myinsert">
+        insert into dept(deptname) values('abc')
+    </insert>
+    <delete id="mydelete">
+        delete from dept where id = 4
+    </delete>
+    <update id="myupdate">
+        update dept set deptname = '小白' where id = 1
+    </update>
+    <select id="getAll" resultType="com.entity.Dept">
+        select id,deptname from dept
+    </select>
+    <select id="getById" resultType="com.entity.Dept">
+        select id,deptname from dept where id = 1
+    </select>
+</mapper>
